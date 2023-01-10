@@ -5,9 +5,65 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>BotTee | Your computer's best friend and personal handyman</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+<body id="cart">
+<main>
+    <header id="pgHeader">
+        <figure class="logo"><img src="./images/botTee_logo.svg" alt="BotTee">
+            <h3><strong>BotTee</strong> - a handyman for your computer</h3>
+        </figure>
+    </header>
+
+    <div class="contentWrapper">
+        <header class="sectionHeader">
+            <h3>Shopping bag</h3>
+            <div class="sep"></div>
+        </header>
+        <section class="main">
+            <article class="item">
+                <header>
+                    <h1>FixIt Bot</h1>
+                </header>
+                <img src="./images/bot.jpg" alt="">
+                <ul class="details">
+                    <li>Item: #12345</li>
+                    <li>Style: Wrench</li>
+                    <li><a href="#" class="href">Edit</a></li>
+                    <li class="price">$788.99</li>
+                    <li class="itemAmt">
+                        <button><i class="fas fa-minus-circle btn subtract"></i></button>
+                        <input type="number" id="amt">
+                        <button><i class="fas fa-plus-circle btn add"></i></button>
+                    </li>
+                    <li><a href="#">Save for later</a></li>
+                </ul>
+            </article>
+        </section>
+        <section id="orderSum">
+            <header>
+                <h3>Order Summary</h3>
+            </header>
+            <article class="order">
+                <ul>
+                    <li><span>Subtotal</span> <span>$788.99</span></li>
+                    <li><span>Shipping</span> <span>TBD</span></li>
+                    <li><span>Estimated Tax</span> <span>$0.00</span></li>
+                    <li><span>Total</span> <span>$788.99</span></li>
+                </ul>
+            </article>
+            <a href="#" class="formBtn">Proceed to checkout</a>
+            <p class="note">Shipping and taxes calculated at checkout</p>
+        </section>
+    </div>
+    <footer>
+        <p><strong>BotTee</strong> | Our bots are there when you need them, they take care of those little details you
+        just don't want to</p>
+        <p class="copy">&copy; BotTee, all rights reserved</p>
+    </footer>
+</main>
 
 </body>
 </html>
