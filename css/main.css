@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis:300,400,700|Nunito:300,400,400i,700,900|Open+Sans:300,400,400i,700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #707070;
+    font-family: "Open Sans", sans-serif;
+    height: 100vh;
+}
+#cart main {
+    height: 100vh;
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: 100vw;
+}
+a {
+    color: #585858;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+h1 {
+    font-size: 1.5em;
+    margin: .5em 0 0;
+}
+h3 {
+    color: #454545;
+    font-size: .845em;
+    margin-bottom: .5em;
+}
+.logo {
+    width: 100px;
+    height: 100px;
+    background-color: #26a3a8;
+    border-radius: 50%;
+    position: absolute;
+    top: -35px;
+    left: -25px;
+
+}
+header#pgHeader {
+    color: #fff;
+    font-family: "Dosis", sans-serif;
+    position: relative;
+    margin-bottom: 5em;
+}
+header#pgHeader h3 {
+    background-color: #26a3a8;
+    color: #fff;
+    font-size: 1.25em;
+    font-weight: 300;
+    padding-bottom: .2em;
+    padding-left: 80px;
+}
+.logo img {
+    width: 44px;
+    margin: 42px 10px 0 34px;
+}
+
