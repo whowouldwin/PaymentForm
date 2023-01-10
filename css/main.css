@@ -151,7 +151,24 @@ section {
     margin: 1em auto;
     display: inline-block;
     text-decoration: none;
-
+}
+footer {
+    background-color: #26a3a8;
+    color: #fff;
+    padding: .4em 1em;
+    text-align: center;
+}
+footer p {
+    font-weight: 300;
+    font-size: .8em;
+}
+footer p strong {
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.25em;
+}
+footer p.copy {
+    font-size: 0.7em;
+    margin: 1em 0;
 }
 
 
