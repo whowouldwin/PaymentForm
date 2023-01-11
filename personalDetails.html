@@ -13,7 +13,29 @@
     <link rel="stylesheet" href="css/personalDetails.css">
 
 </head>
-<body>
+<body id="information">
+<main>
+    <header id="pgHeader">
+        <figure class="logo"><img src="images/botTee_logo.svg" alt="botTee"></figure>
+        <h3><strong>BotTee</strong> - a handyman for your computer</h3>
+    </header>
+    <nav class="checkoutStepper">
+        <ul>
+            <li><a href="index.html">Cart</a></li>
+            <li class="active"><a href="#">Information</a></li>
+            <li><a href="shipping.html">Shipping</a></li>
+            <li><a href="payment.html">Payment</a></li>
+        </ul>
+    </nav>
+    <div class="contentWrapper">
+        <section class="showHideOrderSum">
+            <a href="#" class="showHide"><i class="fas fa-shopping-cart"></i> Show order summary <i class="fas fa-sort-down"></i></a>
+        </section>
+        <section id="orderSummary"></section>
+    </div>
+    <section id="info"></section>
+    <footer></footer>
+</main>
 
 </body>
 </html>
