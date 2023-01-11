@@ -64,6 +64,11 @@ header#pgHeader h3 {
 header.sectionHeader {
     padding: 0 2em;
 }
+.sep {
+    border-top: solid 1px #c7c7c7;
+    border-bottom: solid 1px #c7c7c7;
+    padding: .25em 0;
+}
 section {
     padding: .5em 2em;
 }
@@ -87,6 +92,10 @@ section {
 .item li {
     padding: 0 0 .25em;
 }
+.price {
+    font-weight: 700;
+}
+
 .itemAmt {
     display: flex;
     align-items: center;
@@ -152,6 +161,9 @@ section {
     display: inline-block;
     text-decoration: none;
 }
+.note {
+    font-size: .75em;
+}
 footer {
     background-color: #26a3a8;
     color: #fff;
@@ -170,6 +182,79 @@ footer p.copy {
     font-size: 0.7em;
     margin: 1em 0;
 }
+@media screen and (min-width: 400px) {
+    .item {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto;
+        grid-gap: 10px;
+        grid-template-areas:
+            "h h"
+            "i l";
+    }
+}
 
+
+@media screen and (min-width: 600px){
+    #cart main {
+        grid-template-areas: "ph ph" "c c" "f f";
+        grid-auto-rows: 10% auto 15%;
+    }
+    header#pgHeader {
+        margin-bottom: 0;
+    }
+    .contentWrapper {
+        grid-area: c;
+        display: grid;
+        grid-template-areas:
+            "sh sh"
+            "sb os";
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 2em auto;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    header.sectionHeader {
+        grid-area: sh;
+        max-width: 900px;
+        padding: 0 0 0 2em
+    }
+    #cart footer { grid-area: f;}
+
+    section.main {grid-area: sb;}
+    section#orderSum {
+        grid-area: os;
+        margin: 4px 0 0;
+        background-color: #F8F8F8;
+    }
+
+    .order ul { border: none;}
+}
+/* adjust spacing on orderSum for FF only */
+@-moz-document url-prefix() {
+    section#orderSum {
+        margin: 5px 0 0;
+    }
+}
+@media screen and (min-width: 1000px){
+    .logo {
+        left: calc(50% - 50px);
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo img {
+        margin: auto;
+        position: relative;
+        top: 10px;
+    }
+
+    header#pgHeader h3 {
+        width: 100%;
+        height: 30px;
+        text-align: center;
+        padding-left: 420px;
+    }
+}
 
 
