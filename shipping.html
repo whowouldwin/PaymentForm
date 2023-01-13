@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BotTee | Your computer's best friend and personal handyman</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/personalDetails.css">
+    <link rel="stylesheet" href="css/shipping.css">
+
+</head>
+<body id="ship">
+<main>
+    <header id="pgHeader">
+        <figure class="logo"><img src="images/botTee_logo.svg" alt="BotTee"></figure>
+        <h3><strong>BotTee</strong> - a handymen for your computer</h3>
+    </header>
+    <nav class="checkoutStepper">
+        <ul>
+            <li><a href="index.html">Cart</a></li>
+            <li><a href="personalDetails.html">Information</a></li>
+            <li class="active"><a href="#">Shipping</a></li>
+            <li><a href="payment.html">Payment</a></li>
+        </ul>
+    </nav>
+    <div class="contentWrapperSide">
+        <section class="showHideOrderSum">
+            <a href="#" class="showHide" id="show"><i class="fas fa-shopping-cart"></i> Show order summary <i
+                    class="fas fa-sort-down"></i></a>
+        </section>
+        <section id="orderSum">
+            <article class="item">
+                <ul class="details">
+                    <li class="pic"><img src="/images/unicorn.png" alt="Unicorn"></li>
+                    <li class="prodName"><h1>FixIt Bot</h1></li>
+                    <li class="prodItem"> Item: #12345</li>
+                    <li class="prodStyle">Style: Unicorn</li>
+                    <li class="edit"><a href="#">Edit</a></li>
+                    <li class="sub"><span>Subtotal</span> <span>$788.99</span></li>
+                    <li class="shipping"><span>Shipping</span> <span>Calculated at next step</span></li>
+                    <li class="total"><span>Total</span> <span>$788.99</span></li>
+                </ul>
+            </article>
+        </section>
+    </div>
+    <section class="shipping">
+        <section class="personalInfo">
+            <ul>
+                <li><span>Contact</span><span>nnn@gmail.com</span></li>
+                <li><span>Ship to</span>123 Any Street, Warszawa, Poland</li>
+            </ul>
+        </section>
+        <form action="#" id="shippingMethod">
+            <fieldset>
+                <legend>Shipping method</legend>
+
+                <div id="shippingMethodChoice">
+                    <label for="free" class="radioLabel">
+                        <input type="radio" id="free" name="shipOption" value="0.00" checked>
+                        <span></span>Free ground shipping (3-7 days) <strong>Free</strong>
+                    </label>
+                    <label for="SecondDay" class="radioLabel">
+                        <input type="radio" id="SecondDay" name="shipOption" value="14.99">
+                        <span></span>Second day shipping (3 days) <strong>$14.99</strong>
+                    </label>
+                    <label for="nextDay">
+                        <input type="radio" id="nextDay" name="shipOption" value="22.99">
+                        <span>Next day shipping (2 days)</span> <strong>$22.99</strong>
+                    </label>
+                </div>
+                <a href="payment.html" class="formBtn">Continue to payment</a>
+            </fieldset>
+        </form>
+    </section>
+    <footer>
+        <p><strong>BotTee</strong> | Our bots are there when you need them, they take care of those little details you just don't want to</p>
+        <p class="copy">&copy; BotTee, all rights reserved</p>
+    </footer>
+
+</main>
+</body>
+</html>
