@@ -107,6 +107,24 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <script>
+
+
+    $(".showHideOrderSum").click(function(){
+        $("#orderSummary").toggle();
+
+        var $this = $(this).toggleClass('showhide');
+        if($(this).hasClass('showhide'))
+        {
+            $(this).html('<i class="fas fa-shopping-cart"></i> Hide order summary <i class="fas fa-sort-up"></i>');
+
+        } else {
+            $(this).html('<i class="fas fa-shopping-cart"></i> Show order summary <i class="fas fa-sort-down"></i>');
+        }
+    });
+
+
+
+
     $(document).ready(function (){
         // ZIP CODE - (this uses jQuery so make sure to place it with the document.ready function)
 
