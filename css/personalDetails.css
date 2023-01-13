@@ -14,7 +14,8 @@
     text-align: center;
 }
 .checkoutStepper li:before {
-    content: "1";
+    content: counter(step);
+    counter-increment: step;
     color: #fff;
     border-radius: 50%;
     background-color: #aaa;
@@ -78,10 +79,10 @@
     top: 0px;
     color: #FFFFFF;
 }
-.contentWrapper > section {
+.contentWrapperSide > section {
     padding: 0;
 }
-.contentWrapper {
+.contentWrapperSide {
     padding: .5em 2em;
     background-color: #F8F8F8;
     margin-top: 2em;
@@ -103,7 +104,7 @@ i.fas.fa-sort-down {
 }
 #orderSummary {
     border-top: solid 1px #fff;
-    /*display: none; ///////////////////////////-----------------!!!*/
+    display: none;
 }
 #orderSummary h1 {
     margin-top: 0;
@@ -237,7 +238,90 @@ input:focus + label {
 }
 /*Animation-label(end)*/
 
+@media screen and (min-width: 457px) {
+    .field.half {
+        width: 48%;
+        float: left;
+        margin-right: 2%;
+    }
+    .field.third {
+        width: 27vw;
+        float: left;
+        margin-right: 1vw;
+    }
+}
+@media screen and (min-width:660px) {
+    #orderSummary {
+        height: 100%;
+    }
 
+    main {
+        display: grid;
+        grid-template-areas:
+            "ph ph ph ph"
+            "cs cs cs cs"
+            "cart cart pd pd"
+            "f f f f";
+        grid-template-columns: auto 50% 30% auto;
+        grid-auto-rows: 3% 10% auto 5%;
+    }
+
+    #information header#pgHeader {
+        grid-area: ph;
+    }
+
+    nav.checkoutStepper {
+        grid-area: cs;
+        border-bottom: solid 1px #ccc;
+        padding: 2em 0 2em;
+    }
+
+    .contentWrapperSide {
+        grid-area: pd;
+        display: grid;
+        grid-template-areas:
+            "sh sh"
+            "sb os";
+        grid-template-columns: none;
+        grid-auto-rows: 7% auto;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    section.showHideOrderSum {
+        display: none;
+    }
+
+    #orderSummary {
+        display: block!important;
+        border-top: none;
+    }
+
+    #info { grid-area: cart}
+    .field { width: 98%;}
+    .field.half { width: 48%; }
+    .field.third { width: 31%;}
+    footer { grid-area: f;}
+}
+
+@media screen and (min-width:1200px) {
+    main {
+        grid-template-areas:
+            "ph ph ph ph ph ph"
+            "cs cs cs cs cs cs"
+            ". . cart pd . . "
+            "f f f f f f";
+        grid-template-columns: 10% auto 45% 25% auto 10%;
+    }
+
+    .checkoutStepper ul {
+        width: 1150px;
+    }
+
+    .contentWrapperSide {
+        padding: .5em;
+    }
+}
 
 
 
