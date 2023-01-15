@@ -29,10 +29,11 @@
     </nav>
     <div class="contentWrapperSide">
         <section class="showHideOrderSum">
-            <a href="#" class="showHide" id="show"><i class="fas fa-shopping-cart"></i> Show order summary <i class="fas fa-sort-down"></i></a>
+            <a href="#" class="showHide" id="show"><i class="fas fa-shopping-cart"></i> Show order summary <i
+                    class="fas fa-sort-down"></i></a>
         </section>
         <section id="orderSummary">
-            <article  class="item">
+            <article class="item">
                 <ul class="details">
                     <li class="pic"><img src="/images/unicorn.png" alt="Unicorn"></li>
                     <li class="prodName"><h1>FixIt Bot</h1></li>
@@ -57,17 +58,18 @@
                 <div class="checkbox-group">
                     <input type="checkbox" id="custom-checkbox" class="custom-checkbox" checked>
                     <span class="custom-checkbox-span"></span>
-                    <label for="custom-checkbox" class="custom-checkbox-label"> Keep me up to date on news and exclusive offers</label>
+                    <label for="custom-checkbox" class="custom-checkbox-label"> Keep me up to date on news and exclusive
+                        offers</label>
                 </div>
             </fieldset>
             <fieldset>
                 <legend class="siLabel">Shipping information</legend>
                 <div class="field half">
-                    <input type="text"  id="firstName" name="firstName" placeholder=" " required>
+                    <input type="text" id="firstName" name="firstName" placeholder=" " required>
                     <label for="firstName">First Name</label>
                 </div>
                 <div class="field half">
-                    <input type="text"  id="lastName" name="lastName" placeholder=" " required>
+                    <input type="text" id="lastName" name="lastName" placeholder=" " required>
                     <label for="lastName">Last Name</label>
                 </div>
 
@@ -80,13 +82,13 @@
                     <label for="suite">(optional) Apartment, suite, etc)</label>
                 </div>
                 <div class="field third">
-                    <input type="text" id="zip" name="zip" placeholder=" "pattern="[0-9]*" maxlength="5" required>
+                    <input type="text" id="zip" name="zip" placeholder=" " pattern="[0-9]*" maxlength="5" required>
                     <label for="zip">Zip Code <span class="zip-error">(Not a real zip code)</span></label>
                 </div>
-                 <div class="field third">
-                     <input type="text" id="city" name="city" placeholder=" " required>
-                     <label for="city">City</label>
-                 </div>
+                <div class="field third">
+                    <input type="text" id="city" name="city" placeholder=" " required>
+                    <label for="city">City</label>
+                </div>
                 <div class="field third">
                     <input type="text" id="state" name="state" placeholder=" " required>
                     <label for="state">State</label>
@@ -100,7 +102,8 @@
         </form>
     </section>
     <footer>
-        <p><strong>BotTee</strong> | Our bots are there when you need them, they take care of those little details you just don’t want to</p>
+        <p><strong>BotTee</strong> | Our bots are there when you need them, they take care of those little details you
+            just don’t want to</p>
         <p class="copy">&copy; BotTee, all rights reserved</p>
     </footer>
 </main>
@@ -109,12 +112,11 @@
 <script>
 
 
-    $(".showHideOrderSum").click(function(){
+    $(".showHideOrderSum").click(function () {
         $("#orderSummary").toggle();
 
         var $this = $(this).toggleClass('showhide');
-        if($(this).hasClass('showhide'))
-        {
+        if ($(this).hasClass('showhide')) {
             $(this).html('<i class="fas fa-shopping-cart"></i> Hide order summary <i class="fas fa-sort-up"></i>');
 
         } else {
@@ -123,9 +125,7 @@
     });
 
 
-
-
-    $(document).ready(function (){
+    $(document).ready(function () {
         // ZIP CODE - (this uses jQuery so make sure to place it with the document.ready function)
 
         function is_int(value) {
@@ -137,7 +137,7 @@
         }
 
 
-        $("#zip").keyup(function() {
+        $("#zip").keyup(function () {
             var el = $(this);
 
             // Did they type five integers?
@@ -149,7 +149,7 @@
                     cache: false,
                     dataType: "json",
                     type: "GET",
-                    success: function(result, success) {
+                    success: function (result, success) {
 
                         // Fill in the city / state data
                         $("#city").val(result.city);
@@ -160,7 +160,7 @@
 
                     },
 
-                    error: function(result, success) {
+                    error: function (result, success) {
 
                         $(".zip-error").fadeIn(300);
 
@@ -171,7 +171,8 @@
 
                 $(".zip-error").fadeOut(200);
 
-            };
+            }
+            ;
 
         });
     });
