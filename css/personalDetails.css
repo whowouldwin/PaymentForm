@@ -290,12 +290,6 @@ input:focus + label {
 
     .contentWrapperSide {
         grid-area: pd;
-        display: grid;
-        grid-template-areas:
-            "sh sh"
-            "sb os";
-        grid-template-columns: none;
-        grid-auto-rows: 7% auto;
         max-width: 900px;
         margin: 0 auto;
     }
