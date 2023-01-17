@@ -76,7 +76,7 @@ i[class*="fa-cc"] { /* style the cc icons */
     font-size: 1.3em;
     margin: 0 .15em;
 }
-/* color classes for CC */
+/* color classes for CC, implementing these with JS */
 .visa { color: #1a4ba7;}
 .mc { color: #cc590c;}
 

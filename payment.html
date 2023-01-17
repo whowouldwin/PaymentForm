@@ -65,8 +65,8 @@
                     <label for="cc" class="radioLabel">
                         <input type="radio" id="cc" name="payOption" checked value="creditCard">
                         <span></span>Credit Card
-                        <i class="fab  fa-cc-visa cc visa"></i>
-                        <i class="fab fa-cc-mastercard mc"></i>
+                        <i class="fab  fa-cc-visa cc "></i>
+                        <i class="fab fa-cc-mastercard "></i>
                     </label>
                     <div class="paymentBox creditCard">
                         <div class="field">
@@ -163,6 +163,55 @@
                 $(this).html('<i class="fas fa-shopping-cart"></i> Show order summary <i class="fas fa-sort-down"></i>');
             }
         });
+        // format the CC as user types number - begin
+        $("#ccNum").on("keydown", function (e) {
+
+            //if you change cursor position using "left-error" button - BEGIN
+            var cursor = this.selectionStart;
+            if (this.selectionEnd != cursor) return;
+            if (e.which == 46) {
+                if (this.value[cursor] == " ") {
+                    this.selectionStart++;
+                }
+            } else if (e.which == 8) {
+                if (cursor && this.value[cursor - 1] == " ")
+                {
+                    this.selectionEnd--;
+                }
+            }
+            //if you change cursor position using "left-error" button - END
+        }).on("input", function () {
+            var value = this.value;
+            var cursor = this.selectionStart;
+            var matches = value.substring(0, cursor).match(/[^0-9]/g);
+            if (matches) cursor -= matches.length;
+            value = value.replace(/[^0-9]/g, "").substring(0, 16);
+            var formatted = "";
+            for (var i = 0, n = value.length; i < n; i++) {
+                if (i && i % 4 == 0) {
+                    if (formatted.length <= cursor) cursor++;
+                    formatted += " ";
+                }
+                formatted += value[i];
+            }
+            if (formatted == this.value) return;
+            this.value = formatted;
+            this.selectionEnd = cursor;
+        });
+        // format the CC as user types number - end
+
+        // change credit card icon color
+        $('#ccNum').keyup(function () {
+            var value = $(this).val();
+            if (value.match(/^4/)) { // if the value starts with a 4 (visa)
+                $('i.fa-cc-visa').addClass('visa');
+            } else if (value.match(/^5/)) { // if the value starts with a 5 (mc)
+                $('i.fa-cc-mastercard').addClass('mc');
+            } else { // if neither is true remove either of the classes
+                $('i.cc').removeClass('visa').removeClass('mc');
+                ;
+            }
+        })
 
     }); // end doc ready
 </script>
