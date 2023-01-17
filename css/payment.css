@@ -114,6 +114,44 @@ i[class*="fa-cc"] { /* style the cc icons */
     color: #d8d8d8;
     text-decoration: none;
 }
+/* helper text */
+.fieldAndHelper {
+    position: relative;
+}
+
+.helperText {
+    background-color: #e2fcfd;
+    border: solid 1px #26a3a8;
+    border-radius: 6px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.2;
+    color: #333;
+    padding: 1em .75em .5em;
+    font-size: .8em;
+    position: absolute;
+    top: -162px;
+    right: -17px;
+    width: 815%;
+}
+
+.helperText i.fas.fa-caret-down {
+    position: absolute;
+    right: 20px;
+    bottom: -9px;
+    color: #26a3a8;
+}
+
+.helperText i.fas.fa-times-circle.close {
+    position: absolute;
+    right: -9px;
+    top: -7px;
+    color: #26a3a8;
+}
+
+.hide { display: none;}
+.show {display: block;}
+/* end helper text */
+
 
 @media screen and (min-width:660px) {
     #pay main {
