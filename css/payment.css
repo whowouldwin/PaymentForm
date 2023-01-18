@@ -152,6 +152,52 @@ i[class*="fa-cc"] { /* style the cc icons */
 .show {display: block;}
 /* end helper text */
 
+/* when the page first loads, this information is not hidden, we need to hide that*/
+
+.paypal {
+    display: none;
+}
+.paypal {
+    text-align: center;
+}
+.paypal p {
+    font-size: .9em;
+}
+.far.fa-window-maximize {
+    font-size: 7em;
+    position: relative;
+    display:inline-block;
+}
+.far.fa-window-maximize:after {
+    content: "\f30b";
+    display: inline-block;
+    font-weight: 900;
+    color: #ccc;
+    position: absolute;
+    top: 30px;
+    right: -32px;
+    font-size: 70px;
+}
+
+.browser {
+    position: relative;
+    display: inline-block;
+}
+
+.browser:after {
+    content: "\f141";
+    display: inline-block;
+    font-weight: 900;
+    color: #ccc;
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    font-size: 30px;
+    font-family: "Font Awesome 5 Free";
+}
+#diffAddress {
+    display: none;
+}
 
 @media screen and (min-width:660px) {
     #pay main {
