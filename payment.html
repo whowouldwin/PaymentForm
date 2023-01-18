@@ -219,6 +219,30 @@
                 ;
             }
         })
+        // hide the CVV helper text div
+        document.querySelector('.helperText').classList.add('hide');
+        // make the tooltip able to close on click
+        const tooltip = document.querySelector('.tooltip');
+        tooltip.addEventListener('click', function(){
+            document.querySelector('.helperText').classList.toggle('show'); // toggle the tooltip to show or hide
+            document.querySelector('.helperText').classList.toggle('hide');
+        })
+        // expiration date formatting, add a slash after 2 characters have been entered
+        var characterCount
+        $('#exp').on('input',function(e){
+            if($(this).val().length == 2 && characterCount < $(this).val().length) {
+                $(this).val($(this).val()+'/');
+            }
+            characterCount = $(this).val().length;
+        });
+
+        // make the cc/paypal info boxes show and hide on radio check
+        $('input[name="payOption"]').click(function(){
+            var inputValue = $(this).attr("value");
+            var targetBox = $("." + inputValue);
+            $(".paymentBox").not(targetBox).hide();
+            $(targetBox).show();
+        });
 
     }); // end doc ready
 </script>
