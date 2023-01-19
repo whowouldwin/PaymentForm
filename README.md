@@ -10,7 +10,7 @@ Payment forms,  handling payment
 - [ ] Don't understand why:
   
 
-    `#pay main  {
+    ```#pay main  {
                     display: grid;
                     grid-template-areas: "ph ph ph ph"
                                          "cs cs cs cs"
@@ -19,6 +19,6 @@ Payment forms,  handling payment
                     grid-template-columns: auto 60% 20% auto;
                     grid-template-rows: none; 
                     grid-auto-rows: 6% 18% auto 8%;
-                }`
+                   }```
 
 ![Image](images/compress.png)
