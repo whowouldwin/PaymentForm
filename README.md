@@ -20,4 +20,5 @@ Payment forms,  handling payment
                     grid-template-rows: none; 
                     grid-auto-rows: 6% 18% auto 8%;
                 }
-      
+
+![Image](images/compress.png)
