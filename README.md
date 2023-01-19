@@ -20,4 +20,4 @@ Payment forms,  handling payment
                 } 
     ```
 
-![Image](images/compress.png)
+![Image](images/combine_images.jpg)
